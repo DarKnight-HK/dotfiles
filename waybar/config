@@ -3,12 +3,12 @@
   "margin": 12,
   "modules-left": ["custom/logo","clock", "memory", "cpu", "temperature"],
   "modules-center": ["custom/hex", "hyprland/workspaces"],
-  "modules-right": ["tray","custom/clipboard", "idle_inhibitor", "custom/colorpicker", "bluetooth", "pulseaudio", "network",  "battery" ],
+  "modules-right": ["wlr/taskbar","tray","custom/clipboard", "idle_inhibitor", "custom/colorpicker", "bluetooth", "pulseaudio", "network",  "battery" ],
   "reload_style_on_change":true,
 
   "custom/logo": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
   },
 
   "hyprland/workspaces": {
@@ -24,7 +24,7 @@
 		"default": "" 
 	},
        "persistent-workspaces": {
-         "*": [ 2, 3, 4, 5, 6 ]
+         "*": [1, 2, 3, 4, 5 ]
        }
 },
 
@@ -81,7 +81,7 @@
   "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
   "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
   "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-  "on-click": "rofi-bluetooth",
+  "on-click": "blueman-applet",
  }, 
 
 "network": {
@@ -221,7 +221,21 @@
     "interval": 1,
     "exec": "~/.config/waybar/scripts/powerdraw.sh",
     "return-type": "json"
-  }
-
-}
+  },
+		"wlr/taskbar": {
+		"format": "{icon}",
+		"rotate": 0,
+		"icon-size": 18,
+		"icon-theme": "Adwaita",
+        "spacing": 0,
+		"tooltip-format": "{title}",
+		"on-click": "activate",
+		"on-click-middle": "close",
+		"ignore-list": [
+			"Alacritty"
+		],
+		"app_ids-mapping": {
+			"firefoxdeveloperedition": "firefox-developer-edition"
+		}
+	},}
 

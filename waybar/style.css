@@ -4,8 +4,8 @@
     border: none;
     font-size: 11px;
     font-family: "JetBrainsMono Nerd Font,JetBrainsMono NF" ;
-    min-height: 15px;
-    color: @text;
+    min-height: 25px;
+    color: @mauve;
 }
 
 window#waybar {
@@ -17,17 +17,15 @@ window#waybar {
 }
 
 .modules-right {
+  padding: 0 0 0 5px;
   background: @base;
-  padding: 0 0 12px 0;
 }
 
 .modules-center {
-  padding: 0 0 8px 0;
  background: @base;
 }
 
 .modules-left {
-  padding: 0 0 8px 0;
   background: @base;
 
 }
@@ -37,6 +35,7 @@ window#waybar {
 #bluetooth,
 #network,
 #memory,
+#taskbar,
 #cpu,
 #idle_inhibitor,
 #jack,
@@ -50,8 +49,8 @@ window#waybar {
   padding-top: 3px;
 }
 #workspaces button:hover {
-    background: @text;
-    color: @base;
+    background: @surface0;
+    color: #bac2de;
     animation: ws_hover 20s ease-in-out 1;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
@@ -67,7 +66,7 @@ window#waybar {
 
 
 #clock{
-  color: #5fd1fa;
+  color: @lavender;
 }
 
 
